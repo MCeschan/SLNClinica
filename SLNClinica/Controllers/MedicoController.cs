@@ -99,7 +99,7 @@ namespace SLNClinica.Controllers
             }
             else
             {
-                return View("detalle", medico);
+                return View("Details", medico);
             }
         }
 

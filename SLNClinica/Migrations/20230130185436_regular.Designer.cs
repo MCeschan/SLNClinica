@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SLNClinica.Data;
 
 namespace SLNClinica.Migrations
 {
     [DbContext(typeof(ClinicaDBContext))]
-    partial class ClinicaDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230130185436_regular")]
+    partial class regular
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +31,8 @@ namespace SLNClinica.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Matricula")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Matricula")
+                        .HasColumnType("int");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
