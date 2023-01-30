@@ -123,15 +123,16 @@ namespace SLNClinica.Controllers
         //POST: medico/Edit/2
         [ActionName("Edit")]
         [HttpPost]
-        public ActionResult EditConfirmacion(int id, Medico medico)
+        public ActionResult EditConfirmacion(Medico medico)
         {
-            if (id != medico.Id)
+            if (ModelState.IsValid)
             {
-                return NotFound();
+                context.Entry(medico).State = EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
             }
-            context.Entry(medico).State = EntityState.Modified;
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            else return View(medico);
+
         }
 
     }

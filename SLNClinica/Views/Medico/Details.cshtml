@@ -1,0 +1,26 @@
+﻿@model SLNClinica.Models.Medico
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h2> Ver Detalle</h2>
+    @Html.ActionLink("Volver","Index","Medico")
+
+    <p>
+        @Html.DisplayNameFor(m=> m.Nombre);
+        @Html.DisplayFor(m=>m.Nombre);
+    </p>
+    <p>
+        @Html.DisplayNameFor(m=> m.Apellido);
+        @Html.DisplayFor(m=>m.Apellido);
+    </p>
+    <p>
+        @Html.DisplayNameFor(m=> m.Matricula);
+        @Html.DisplayFor(m=>m.Matricula);
+    </p>
+</body>
+</html>

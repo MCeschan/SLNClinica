@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SLNClinica.Models.Medico>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @Html.ActionLink("Nuevo", "Create","Medico")
+
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(m=> m.Nombre)</th>
+            <th>@Html.DisplayNameFor(m=> m.Apellido)</th>
+            <th>@Html.DisplayNameFor(m=> m.Matricula)</th>
+            <th></th>
+        </tr>
+
+        @foreach (var medico in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m=> medico.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(m=> medico.Apellido)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(m=> medico.Matricula)
+                </td>
+                <td>
+                @Html.ActionLink("Detalle", "Details", "Medico",new{id=medico.Id}) <!--Se crea el new id para que el parametro viaje con el mismo nombre que recibe en el controlador-->
+                @Html.ActionLink("Eliminar", "Delete", "Medico",new{id=medico.Id})
+                </td>
+
+            </tr>
+        }
+    </table>
+
+
+
+</body>
+</html>
