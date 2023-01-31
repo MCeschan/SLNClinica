@@ -9,7 +9,7 @@
 <body>
 
     <div id="header">
-        <h1>Medicos Web Site</h1>
+        <h1>Clinica Santa Maria</h1>
     </div>
 
     <div id="menu">
@@ -17,14 +17,14 @@
         @Html.ActionLink("Medico","Index","Medico")
     </div>
     <div class="main">
-        <div id="sidebaropcional">
+        <div id="sidebaropcional" class="sidebar">
             @if (IsSectionDefined("SideBaropcional"))
             {
                 @RenderSection("SideBaropcional")
             }
             else
             {
-                <h2>Zona Sidebar Fija</h2>
+                <h4>Clinica de alta complejidad que cuenta con una amplia red de atención médica. El objetivo es brindar atención médica por medio de su reconocido cuerpo de profesionales de la salud</h4>
             }
         </div>
 
@@ -33,14 +33,20 @@
             @RenderBody()
         </div>
 
-        <div id="sidebaropcional2">
+        <div id="sidebaropcional2" class="sidebar">
             @if (IsSectionDefined("SideBaropcional2"))
             {
                 @RenderSection("SideBaropcional2")
             }
             else
             {
-                <h2>Zona Sidebar Fija</h2>
+                
+                <h3>VICENTE LÓPEZ</h3>
+                <p>Av. Maipú 1402 /1444 Vicente López</p>
+                <p>Tel: 0810 222 2748 (Central de Turnos)</p>
+                <h4>Horario de atención</h4>
+                <p>Atención Ambulatoria con turno previo: lunes a viernes de 8 a 20 hs. - sábados de 8 a 12 hs. Laboratorio: lunes a viernes de 07:00 a 15:00 hs. y sábados de 08:00 a 11:00 hs.</p>
+                
             }
         </div>
     </div>

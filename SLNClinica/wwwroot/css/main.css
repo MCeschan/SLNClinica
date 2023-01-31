@@ -1,6 +1,8 @@
 ﻿.main{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap:2px 5px;
+    height:400px;
 }
 #header {
     background-color: forestgreen;
