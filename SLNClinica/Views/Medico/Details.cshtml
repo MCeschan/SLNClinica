@@ -1,12 +1,7 @@
 ﻿@model SLNClinica.Models.Medico
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+@{
+    ViewData["Title"] = "Detalles medico";
+}
     <h2> Ver Detalle</h2>
     @Html.ActionLink("Volver","Index","Medico")
 
@@ -23,5 +18,4 @@
         @Html.DisplayFor(m=>m.Matricula);
     </p>
     @Html.ActionLink("Editar","Edit","Medico",new{id=Model.Id})
-</body>
-</html>
+

@@ -1,0 +1,45 @@
+﻿.main{
+    display: flex;
+    justify-content: space-between;
+}
+#header {
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 32px;
+    padding: 2px;
+}
+
+#menu {
+    background-color: lightblue;
+}
+
+.listaimagenes{
+    list-style: none;
+    padding: 0;
+}
+
+#sidebaropcional2 {
+    margin: 10px;
+    padding: 5px;
+    border: dotted 3px darkblue;
+    background-color: lightblue;
+}
+
+#sidebaropcional {
+    margin: 10px;
+    padding: 5px;
+    border: dotted 3px darkblue;
+    background-color: lightblue;
+}
+
+#content {
+    float: left;
+    margin: 10px;
+}
+
+#footer {
+    text-align: center;
+    color: blue;
+    clear: both;
+}

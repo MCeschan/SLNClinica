@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Medicos Web Site</h1>
+    </div>
+
+    <div id="menu">
+        @Html.ActionLink("Home","Index","Home")
+        @Html.ActionLink("Medico","Index","Medico")
+    </div>
+    <div class="main">
+        <div id="sidebaropcional">
+            @if (IsSectionDefined("SideBaropcional"))
+            {
+                @RenderSection("SideBaropcional")
+            }
+            else
+            {
+                <h2>Zona Sidebar Fija</h2>
+            }
+        </div>
+
+        
+        <div id="content">
+            @RenderBody()
+        </div>
+
+        <div id="sidebaropcional2">
+            @if (IsSectionDefined("SideBaropcional2"))
+            {
+                @RenderSection("SideBaropcional2")
+            }
+            else
+            {
+                <h2>Zona Sidebar Fija</h2>
+            }
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>info@Medicos.com</p>
+    </div>
+</body>
+</html>
